@@ -1,15 +1,151 @@
-@import "tailwindcss";
-
-@theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
-
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
-}
+    /* UI moderne et élégant pour le générateur de mèmes */
+    
+    body {
+        font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #f7b42c 0%, #fc575e 100%);
+        color: #23272f;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+    }
+    
+    main {
+        max-width: 900px;
+        margin: 40px auto 0 auto;
+        padding: 32px 28px 40px 28px;
+        background: rgba(255, 255, 255, 0.97);
+        border-radius: 18px;
+        box-shadow: 0 8px 32px rgba(60, 60, 60, 0.12), 0 1.5px 8px rgba(252, 87, 94, 0.08);
+        backdrop-filter: blur(2px);
+        border: 1.5px solid #f7b42c22;
+    }
+    
+    h1 {
+        font-size: 2.7rem;
+        font-weight: 800;
+        letter-spacing: -1px;
+        text-align: center;
+        margin-bottom: 18px;
+        color: #fc575e;
+        text-shadow: 0 2px 8px #f7b42c44;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #f7b42c;
+        margin-top: 32px;
+        margin-bottom: 16px;
+    }
+    /* Container formulaire : colonne centrée */
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        /* espace entre chaque champ */
+        max-width: 400px;
+        margin: 20px auto;
+        /* centrer horizontalement + marge haut/bas */
+        padding: 0 12px;
+        /* petite marge intérieure */
+    }
+    /* Styles communs aux inputs et selects */
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"],
+    input[type="tel"],
+    input[type="name"],
+    input[type="prename"],
+    select {
+        border: 1.5px solid #fc575e;
+        border-radius: 8px;
+        padding: 12px 14px;
+        font-size: 1.1rem;
+        outline: none;
+        background: #fff8f6;
+        transition: border 0.2s, background 0.2s;
+        width: 100%;
+        /* occupe toute la largeur */
+        box-sizing: border-box;
+    }
+    /* Focus */
+    
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    input[type="date"]:focus,
+    input[type="tel"]:focus,
+    select:focus {
+        border-color: #f7b42c;
+        background: #fffbe9;
+    }
+    /* Placeholder */
+    
+    input::placeholder {
+        color: #bdbdbd;
+        opacity: 1;
+    }
+    /* Champ en erreur */
+    
+    input.error,
+    select.error {
+        border-color: #fc575e !important;
+        background: #fff3f3 !important;
+    }
+    /* Ligne téléphone avec select et input côte à côte */
+    
+    .form-phone-row {
+        display: flex;
+        gap: 8px;
+    }
+    /* Ajuste la largeur de chaque champ dans la ligne téléphone */
+    
+    .form-phone-row select {
+        flex: 0 0 120px;
+        /* fixe la largeur du select (code pays) */
+    }
+    
+    .form-phone-row input[type="tel"] {
+        flex: 1;
+        /* prend tout l’espace restant */
+    }
+    /* Bouton submit */
+    
+    button[type="submit"] {
+        background: linear-gradient(90deg, #fc575e 0%, #f7b42c 100%);
+        color: #fff;
+        font-weight: 700;
+        border: none;
+        border-radius: 8px;
+        padding: 14px 0;
+        font-size: 1.2rem;
+        cursor: pointer;
+        box-shadow: 0 2px 8px #fc575e22;
+        transition: background 0.2s, transform 0.1s;
+        width: 100%;
+        display: block;
+        margin-top: 12px;
+    }
+    
+    button[type="submit"]:hover {
+        background: linear-gradient(90deg, #f7b42c 0%, #fc575e 100%);
+        transform: translateY(-2px) scale(1.04);
+    }
+    /* Style input file */
+    
+    input[type="file"] {
+        display: block;
+        margin: 0 auto 18px auto;
+        font-size: 1rem;
+    }
+    
+    img {
+        border-radius: 8px;
+        box-shadow: 0 2px 8px #f7b42c22;
+        max-width: 100%;
+        margin: 10px 0;
+        transition: transform 0.2s;
+    }
